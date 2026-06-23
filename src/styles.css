@@ -147,3 +147,8 @@ div:hover > div > .upload-hint { opacity: 1; }
 @media (max-width: 768px) {
   .upgrade-grid { grid-template-columns: 1fr !important; }
 }
+
+/* Hide floating theme toggle on mobile - moved to Settings > Appearance instead */
+@media (max-width: 768px) {
+  .global-theme-toggle { display: none !important; }
+}

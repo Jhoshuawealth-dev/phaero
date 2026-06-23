@@ -12,11 +12,13 @@ import BillingSettings from '../components/settings/BillingSettings'
 import TeamSettings from '../components/settings/TeamSettings'
 import AgentsSettings from '../components/settings/AgentsSettings'
 import PrivacySettings from '../components/settings/PrivacySettings'
+import AppearanceSettings from '../components/settings/AppearanceSettings'
 import NotificationSettings from '../components/settings/NotificationSettings'
 
 const sections = [
   { group: 'ACCOUNT', items: [
     { key: 'account', label: 'Your Account', icon: '👤' },
+    { key: 'appearance', label: 'Appearance', icon: '🎨' },
     { key: 'notifications', label: 'Notifications', icon: '🔔' },
   ]},
   { group: 'PROJECT', items: [
@@ -47,6 +49,7 @@ export default function SettingsLayout() {
   const renderContent = () => {
     switch (active) {
       case 'account': return <AccountSettings />
+      case 'appearance': return <AppearanceSettings />
       case 'notifications': return <NotificationSettings />
       case 'general': return <GeneralSettings />
       case 'git': return <GitSettings />

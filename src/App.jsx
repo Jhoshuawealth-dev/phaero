@@ -29,7 +29,7 @@ import { useLocation } from 'react-router-dom'
 function GlobalThemeToggle() {
   const location = useLocation()
   if (location.pathname === '/builder') return null
-  return <ThemeToggle />
+  return <div className="global-theme-toggle"><ThemeToggle /></div>
 }
 
 function App() {
