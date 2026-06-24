@@ -206,3 +206,27 @@ div:hover > div > .upload-hint { opacity: 1; }
 @media (max-width: 768px) {
   .settings-content > div { max-width: 100% !important; }
 }
+
+/* Dashboard hamburger menu mobile */
+@media (max-width: 768px) {
+  .dashboard-mobile-toggle { display: flex !important; align-items: center; justify-content: center; }
+  .dashboard-mobile-close { display: flex !important; align-items: center; justify-content: center; }
+  .dashboard-sidebar { display: none !important; }
+  .dashboard-sidebar.mobile-open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 200 !important;
+    overflow-y: auto !important;
+  }
+  .dashboard-sidebar.mobile-open .dashboard-sidebar-logo,
+  .dashboard-sidebar.mobile-open .dashboard-sidebar-nav,
+  .dashboard-sidebar.mobile-open .dashboard-sidebar-credits,
+  .dashboard-sidebar.mobile-open .dashboard-sidebar-user {
+    display: block !important;
+  }
+  .dashboard-main-content { padding: 70px 16px 16px !important; }
+}

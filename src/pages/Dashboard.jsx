@@ -8,12 +8,13 @@ import NotificationToggles from '../components/NotificationToggles'
 import UsageChart from '../components/UsageChart'
 import AgentsConnectors from '../components/AgentsConnectors'
 
-function Sidebar({ tab, setTab, navigate, profile, signOut }) {
+function Sidebar({ tab, setTab, navigate, profile, signOut, mobileMenuOpen, setMobileMenuOpen }) {
   const initial = profile?.full_name ? profile.full_name[0].toUpperCase() : 'U'
   return (
-    <div className="dashboard-sidebar" style={{ width: '240px', background: '#0d0d0d', borderRight: '1px solid #1a1a1a', display: 'flex', flexDirection: 'column', padding: '0', minHeight: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 50 }}>
-      <div className="dashboard-sidebar-logo" style={{ padding: '20px', borderBottom: '1px solid #1a1a1a' }}>
+    <div className={`dashboard-sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`} style={{ width: '240px', background: '#0d0d0d', borderRight: '1px solid #1a1a1a', display: 'flex', flexDirection: 'column', padding: '0', minHeight: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 50 }}>
+      <div className="dashboard-sidebar-logo" style={{ padding: '20px', borderBottom: '1px solid #1a1a1a', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <img src={logo} alt="Phaero" style={{ height: '44px', cursor: 'pointer' }} onClick={() => navigate('/')} />
+        <button className="dashboard-mobile-close" onClick={() => setMobileMenuOpen(false)} style={{ display: 'none', background: '#1a1a1a', border: '1px solid #222', color: '#fff', width: '28px', height: '28px', borderRadius: '6px', fontSize: '14px', cursor: 'pointer' }}>✕</button>
       </div>
 
       <div className="dashboard-sidebar-nav" style={{ padding: '12px', flex: 1 }}>
@@ -35,7 +36,7 @@ function Sidebar({ tab, setTab, navigate, profile, signOut }) {
           { icon: '💳', label: 'Billing', key: 'billing' },
           { icon: '👥', label: 'Team', key: 'team' },
         ].map((item, i) => (
-          <div key={i} onClick={() => navigate('/settings')}
+          <div key={i} onClick={() => { setMobileMenuOpen(false); navigate('/settings') }}
             style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 12px', borderRadius: '8px', cursor: 'pointer', marginBottom: '2px', background: tab === item.key ? '#1a1a0a' : 'transparent', color: tab === item.key ? '#D4AF37' : '#666', fontSize: '14px', fontWeight: tab === item.key ? '700' : '400' }}>
             <span style={{ fontSize: '16px' }}>{item.icon}</span> {item.label}
           </div>
@@ -74,6 +75,7 @@ export default function Dashboard() {
     if (refreshProfile) refreshProfile()
   }, [])
   const [tab, setTab] = useState('projects')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [search, setSearch] = useState('')
   const [sort, setSort] = useState('recent')
   const [projects, setProjects] = useState([])
@@ -91,7 +93,8 @@ export default function Dashboard() {
 
   return (
     <div className="dashboard-outer" style={{ background: '#0A0A0A', color: '#fff', minHeight: '100vh', fontFamily: 'Inter, sans-serif', display: 'flex' }}>
-      <Sidebar tab={tab} setTab={setTab} navigate={navigate} profile={profile} signOut={signOut} />
+      <button className="dashboard-mobile-toggle" onClick={() => setMobileMenuOpen(true)} style={{ display: 'none', position: 'fixed', top: '16px', left: '16px', zIndex: 60, background: '#111', border: '1px solid #222', color: '#fff', width: '40px', height: '40px', borderRadius: '8px', fontSize: '18px', cursor: 'pointer' }}>☰</button>
+      <Sidebar tab={tab} setTab={setTab} navigate={navigate} profile={profile} signOut={signOut} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
 
       <div className="dashboard-main-content" style={{ marginLeft: '240px', flex: 1, padding: '40px', minHeight: '100vh' }}>
 
