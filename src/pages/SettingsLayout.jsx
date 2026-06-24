@@ -64,10 +64,10 @@ export default function SettingsLayout() {
   }
 
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', minHeight: '100vh', fontFamily: 'Inter, sans-serif', display: 'flex' }}>
+    <div className="settings-layout-outer" style={{ background: '#0A0A0A', color: '#fff', minHeight: '100vh', fontFamily: 'Inter, sans-serif', display: 'flex' }}>
 
       {/* Settings sidebar */}
-      <div style={{ width: '260px', background: '#0d0d0d', borderRight: '1px solid #1a1a1a', minHeight: '100vh', padding: '20px 0', flexShrink: 0 }}>
+      <div className="settings-sidebar" style={{ width: '260px', background: '#0d0d0d', borderRight: '1px solid #1a1a1a', minHeight: '100vh', padding: '20px 0', flexShrink: 0 }}>
         <div style={{ padding: '0 20px 20px' }}>
           <button onClick={() => navigate('/dashboard')} style={{ background: 'none', border: 'none', color: '#666', cursor: 'pointer', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px', padding: 0 }}>
             ← Go back
@@ -75,10 +75,10 @@ export default function SettingsLayout() {
         </div>
 
         {sections.map((section, si) => (
-          <div key={si} style={{ marginBottom: '20px' }}>
+          <div key={si} className="settings-sidebar-group" style={{ marginBottom: '20px' }}>
             <p style={{ fontSize: '10px', color: '#333', fontWeight: '700', letterSpacing: '1px', padding: '0 20px', marginBottom: '6px' }}>{section.group}</p>
             {section.items.map(item => (
-              <div key={item.key} onClick={() => setActive(item.key)} style={{
+              <div key={item.key} onClick={() => setActive(item.key)} className={`settings-sidebar-item ${active === item.key ? 'active' : ''}`} style={{
                 display: 'flex', alignItems: 'center', gap: '10px', padding: '9px 20px', cursor: 'pointer',
                 background: active === item.key ? '#1a1a0a' : 'transparent',
                 color: active === item.key ? '#D4AF37' : '#999',
@@ -90,10 +90,11 @@ export default function SettingsLayout() {
             ))}
           </div>
         ))}
+        <div className="settings-sidebar-group-mobile" style={{ display: 'none' }} />
       </div>
 
       {/* Content area */}
-      <div style={{ flex: 1, padding: '40px 48px', overflowY: 'auto', maxHeight: '100vh' }}>
+      <div className="settings-content" style={{ flex: 1, padding: '40px 48px', overflowY: 'auto', maxHeight: '100vh' }}>
         <div style={{ maxWidth: '700px' }}>
           {renderContent()}
         </div>
