@@ -312,10 +312,10 @@ export default function Builder() {
   if (initialLoad) return <PageLoader text="LOADING BUILDER..." />
 
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', height: '100vh', fontFamily: 'Inter, sans-serif', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+    <div style={{ background: '#16161A', color: '#fff', height: '100vh', fontFamily: 'Inter, sans-serif', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
 
       {/* Top bar */}
-      <div className="builder-topbar" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 16px', borderBottom: '1px solid #1a1a1a', background: '#0d0d0d', flexShrink: 0 }}>
+      <div className="builder-topbar" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '8px 16px', borderBottom: '1px solid #1a1a1a', background: '#1C1C21', flexShrink: 0 }}>
         <div className="builder-topbar-left" style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           <div style={{ position: 'relative' }}>
             <div onClick={() => setShowMenu(!showMenu)} style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer', padding: '4px 8px', borderRadius: '8px', transition: 'background 0.15s' }}>
@@ -330,7 +330,7 @@ export default function Builder() {
         </div>
 
         {/* Device switcher */}
-        <div className="builder-device-switcher" style={{ display: 'flex', gap: '2px', background: '#111', border: '1px solid #1e1e1e', borderRadius: '8px', padding: '3px' }}>
+        <div className="builder-device-switcher" style={{ display: 'flex', gap: '2px', background: '#202024', border: '1px solid #1e1e1e', borderRadius: '8px', padding: '3px' }}>
           {devices.map((d, i) => (
             <button key={i} onClick={() => setDevice(i)} title={d.label} style={{ background: device === i ? '#D4AF37' : 'transparent', border: 'none', padding: '6px 10px', borderRadius: '6px', cursor: 'pointer', transition: 'all 0.15s', display: 'flex', alignItems: 'center' }}>{d.svg(device === i)}</button>
           ))}
@@ -358,7 +358,7 @@ export default function Builder() {
       <div className="builder-main-grid" style={{ display: 'grid', gridTemplateColumns: selectedBlockId && viewMode !== 'code' ? '220px 1fr 240px 280px' : '220px 1fr 280px', flex: 1, overflow: 'hidden', transition: 'grid-template-columns 0.2s' }}>
 
         {/* Left sidebar */}
-        <div className={`builder-sidebar ${mobileView === 'blocks' ? 'mobile-open' : ''}`} style={{ background: '#0d0d0d', borderRight: '1px solid #1a1a1a', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+        <div className={`builder-sidebar ${mobileView === 'blocks' ? 'mobile-open' : ''}`} style={{ background: '#1C1C21', borderRight: '1px solid #1a1a1a', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div className="mobile-only" style={{ padding: '10px 12px', borderBottom: '1px solid #1a1a1a', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span style={{ fontSize: '13px', color: '#D4AF37', fontWeight: '700' }}>Blocks</span>
             <button onClick={() => setMobileView('canvas')} style={{ background: '#1a1a1a', border: '1px solid #222', color: '#fff', width: '28px', height: '28px', borderRadius: '6px', fontSize: '14px' }}>✕</button>
@@ -383,7 +383,7 @@ export default function Builder() {
               <>
                 <p style={{ fontSize: '10px', color: '#333', marginBottom: '10px', fontWeight: '700', letterSpacing: '1.5px' }}>PAGES</p>
                 {['Home', 'About', 'Shop', 'Contact'].map((p, i) => (
-                  <div key={i} style={{ background: i === 0 ? '#1a1a0a' : '#111', border: `1px solid ${i === 0 ? '#D4AF3766' : '#1a1a1a'}`, borderRadius: '6px', padding: '9px 12px', marginBottom: '5px', fontSize: '12px', color: i === 0 ? '#D4AF37' : '#555', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div key={i} style={{ background: i === 0 ? '#1a1a0a' : '#202024', border: `1px solid ${i === 0 ? '#D4AF3766' : '#1a1a1a'}`, borderRadius: '6px', padding: '9px 12px', marginBottom: '5px', fontSize: '12px', color: i === 0 ? '#D4AF37' : '#555', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     {p} {i === 0 && <span style={{ fontSize: '10px', background: '#D4AF3722', padding: '1px 5px', borderRadius: '4px' }}>active</span>}
                   </div>
                 ))}
@@ -397,7 +397,7 @@ export default function Builder() {
                   <p style={{ fontSize: '12px', color: '#444', lineHeight: '1.6' }}>No saved versions yet. Keep editing — Phaero autosaves your progress.</p>
                 ) : (
                   versions.map((v, i) => (
-                    <div key={v.id} style={{ background: i === 0 ? '#1a1a0a' : '#111', border: `1px solid ${i === 0 ? '#D4AF3766' : '#1a1a1a'}`, borderRadius: '6px', padding: '9px 12px', marginBottom: '5px', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div key={v.id} style={{ background: i === 0 ? '#1a1a0a' : '#202024', border: `1px solid ${i === 0 ? '#D4AF3766' : '#1a1a1a'}`, borderRadius: '6px', padding: '9px 12px', marginBottom: '5px', cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <div>
                         <div style={{ fontSize: '12px', color: i === 0 ? '#D4AF37' : '#aaa' }}>{timeAgo(v.created_at)}{i === 0 ? ' — Latest' : ''}</div>
                         <div style={{ fontSize: '10px', color: '#444' }}>{v.snapshot?.length || 0} block{v.snapshot?.length === 1 ? '' : 's'}</div>
@@ -454,7 +454,7 @@ export default function Builder() {
         )}
 
         {/* AI Chat */}
-        <div className={`builder-ai-chat ${mobileView === 'chat' ? 'mobile-open' : ''}`} style={{ background: '#0d0d0d', borderLeft: '1px solid #1a1a1a', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+        <div className={`builder-ai-chat ${mobileView === 'chat' ? 'mobile-open' : ''}`} style={{ background: '#1C1C21', borderLeft: '1px solid #1a1a1a', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
           <div className="mobile-only" style={{ padding: '10px 12px', borderBottom: '1px solid #1a1a1a', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <span style={{ fontSize: '13px', color: '#D4AF37', fontWeight: '700' }}>Osiris</span>
             <button onClick={() => setMobileView('canvas')} style={{ background: '#1a1a1a', border: '1px solid #222', color: '#fff', width: '28px', height: '28px', borderRadius: '6px', fontSize: '14px' }}>✕</button>
@@ -499,7 +499,7 @@ export default function Builder() {
           {/* Suggestions */}
           <div style={{ padding: '8px 12px', borderTop: '1px solid #1a1a1a', display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
             {['Make hero darker', 'Add pricing table', 'Change to blue theme', 'Add WhatsApp button'].map((s, i) => (
-              <button key={i} onClick={() => setPrompt(s)} style={{ background: '#111', color: '#444', border: '1px solid #1e1e1e', padding: '4px 9px', borderRadius: '8px', fontSize: '11px', cursor: 'pointer', transition: 'all 0.15s', fontWeight: '500' }}
+              <button key={i} onClick={() => setPrompt(s)} style={{ background: '#202024', color: '#444', border: '1px solid #1e1e1e', padding: '4px 9px', borderRadius: '8px', fontSize: '11px', cursor: 'pointer', transition: 'all 0.15s', fontWeight: '500' }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor = '#D4AF3766'; e.currentTarget.style.color = '#D4AF37' }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = '#1e1e1e'; e.currentTarget.style.color = '#444' }}>{s}</button>
             ))}
@@ -507,16 +507,16 @@ export default function Builder() {
 
           {/* Input */}
           <div style={{ padding: '10px 12px', borderTop: '1px solid #1a1a1a', display: 'flex', gap: '8px' }}>
-            <input value={prompt} onChange={e => setPrompt(e.target.value)} onKeyDown={e => e.key === 'Enter' && sendPrompt()} placeholder="Describe a change..." style={{ flex: 1, background: '#111', border: '1px solid #1e1e1e', color: '#fff', padding: '10px 12px', borderRadius: '8px', fontSize: '13px', outline: 'none', transition: 'border-color 0.2s' }}
+            <input value={prompt} onChange={e => setPrompt(e.target.value)} onKeyDown={e => e.key === 'Enter' && sendPrompt()} placeholder="Describe a change..." style={{ flex: 1, background: '#202024', border: '1px solid #1e1e1e', color: '#fff', padding: '10px 12px', borderRadius: '8px', fontSize: '13px', outline: 'none', transition: 'border-color 0.2s' }}
               onFocus={e => e.target.style.borderColor = '#D4AF37'}
               onBlur={e => e.target.style.borderColor = '#1e1e1e'} />
-            <button onClick={sendPrompt} disabled={loading || !prompt.trim()} style={{ background: prompt.trim() && !loading ? '#D4AF37' : '#111', color: prompt.trim() && !loading ? '#000' : '#333', border: 'none', padding: '10px 14px', borderRadius: '8px', fontWeight: '700', cursor: 'pointer', fontSize: '14px', transition: 'all 0.2s' }}>→</button>
+            <button onClick={sendPrompt} disabled={loading || !prompt.trim()} style={{ background: prompt.trim() && !loading ? '#D4AF37' : '#202024', color: prompt.trim() && !loading ? '#000' : '#333', border: 'none', padding: '10px 14px', borderRadius: '8px', fontWeight: '700', cursor: 'pointer', fontSize: '14px', transition: 'all 0.2s' }}>→</button>
           </div>
         </div>
       </div>
 
       {/* Mobile bottom tab bar */}
-      <div className="builder-mobile-tabs" style={{ display: 'none', background: '#0d0d0d', borderTop: '1px solid #1a1a1a', padding: '8px 12px', justifyContent: 'space-around', gap: '8px' }}>
+      <div className="builder-mobile-tabs" style={{ display: 'none', background: '#1C1C21', borderTop: '1px solid #1a1a1a', padding: '8px 12px', justifyContent: 'space-around', gap: '8px' }}>
         {[
           { key: 'blocks', label: 'Blocks', icon: '🧱' },
           { key: 'canvas', label: 'Site', icon: '🖥️' },

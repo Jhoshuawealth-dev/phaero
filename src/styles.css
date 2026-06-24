@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html, body, #root { width: 100%; min-height: 100vh; background: #0A0A0A; }
+html, body, #root { width: 100%; min-height: 100vh; background: #16161A; }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-track { background: #16161A; }
 ::-webkit-scrollbar-thumb { background: #D4AF3744; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
 

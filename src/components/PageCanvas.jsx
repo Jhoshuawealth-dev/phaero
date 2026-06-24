@@ -37,7 +37,7 @@ export default function PageCanvas({ items, onRemove, onUpdate, selectedId, onSe
       {items.length === 0 ? (
         <>
           {/* Looks like a real site header so it never feels "broken" */}
-          <div style={{ padding: '60px 24px', textAlign: 'center', background: '#0d0d0d' }}>
+          <div style={{ padding: '60px 24px', textAlign: 'center', background: '#1C1C21' }}>
             <div style={{ fontSize: '20px', fontWeight: '800', color: '#D4AF37', marginBottom: '8px' }}>{projectName || 'Your Website'}</div>
             <div style={{ fontSize: '13px', color: '#555' }}>This is your blank canvas — drag blocks from the left to start building</div>
           </div>

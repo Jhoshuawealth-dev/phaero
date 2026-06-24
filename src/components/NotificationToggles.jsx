@@ -42,7 +42,7 @@ export default function NotificationToggles({ profile, refreshProfile }) {
   return (
     <div>
       {Object.keys(labels).map((key) => (
-        <div key={key} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', background: '#111', border: '1px solid #1e1e1e', borderRadius: '10px', marginBottom: '8px' }}>
+        <div key={key} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', background: '#202024', border: '1px solid #1e1e1e', borderRadius: '10px', marginBottom: '8px' }}>
           <div>
             <div style={{ fontSize: '13px', fontWeight: '600', color: '#fff', marginBottom: '2px' }}>{labels[key].label}</div>
             <div style={{ fontSize: '11px', color: '#555' }}>{labels[key].desc}</div>

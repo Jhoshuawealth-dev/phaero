@@ -65,12 +65,12 @@ export default function SettingsLayout() {
   }
 
   return (
-    <div className="settings-layout-outer" style={{ background: '#0A0A0A', color: '#fff', minHeight: '100vh', fontFamily: 'Inter, sans-serif', display: 'flex' }}>
+    <div className="settings-layout-outer" style={{ background: '#16161A', color: '#fff', minHeight: '100vh', fontFamily: 'Inter, sans-serif', display: 'flex' }}>
 
       {/* Settings sidebar */}
-      <button className="settings-mobile-toggle" onClick={() => setMobileMenuOpen(true)} style={{ display: 'none', position: 'fixed', top: '16px', left: '16px', zIndex: 60, background: '#111', border: '1px solid #222', color: '#fff', width: '40px', height: '40px', borderRadius: '8px', fontSize: '18px', cursor: 'pointer' }}>☰</button>
+      <button className="settings-mobile-toggle" onClick={() => setMobileMenuOpen(true)} style={{ display: 'none', position: 'fixed', top: '16px', left: '16px', zIndex: 60, background: '#202024', border: '1px solid #222', color: '#fff', width: '40px', height: '40px', borderRadius: '8px', fontSize: '18px', cursor: 'pointer' }}>☰</button>
 
-      <div className={`settings-sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`} style={{ width: '260px', background: '#0d0d0d', borderRight: '1px solid #1a1a1a', minHeight: '100vh', padding: '20px 0', flexShrink: 0 }}>
+      <div className={`settings-sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`} style={{ width: '260px', background: '#1C1C21', borderRight: '1px solid #1a1a1a', minHeight: '100vh', padding: '20px 0', flexShrink: 0 }}>
         <div style={{ padding: '0 20px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <button onClick={() => navigate('/dashboard')} style={{ background: 'none', border: 'none', color: '#666', cursor: 'pointer', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px', padding: 0 }}>
             ← Go back

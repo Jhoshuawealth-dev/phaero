@@ -66,7 +66,7 @@ export default function Templates() {
   }
 
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
+    <div style={{ background: '#16161A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
       <Navbar />
 
       <section className="section-pad" style={{ textAlign: 'center', padding: '80px 60px 40px' }}>
@@ -78,13 +78,13 @@ export default function Templates() {
       <div className="section-pad" style={{ padding: '0 60px 24px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', position: 'relative' }}>
           <span style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)', color: '#444', fontSize: '16px' }}>🔍</span>
-          <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search templates..." className="input-gold" style={{ width: '100%', background: '#111', border: '1px solid #1e1e1e', color: '#fff', padding: '12px 14px 12px 42px', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box' }} />
+          <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search templates..." className="input-gold" style={{ width: '100%', background: '#202024', border: '1px solid #1e1e1e', color: '#fff', padding: '12px 14px 12px 42px', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box' }} />
         </div>
       </div>
 
       <div className="section-pad" style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap', padding: '0 60px 32px' }}>
         {categories.map((c, i) => (
-          <button key={i} onClick={() => setActive(c)} style={{ background: active === c ? '#D4AF37' : '#111', color: active === c ? '#000' : '#555', border: `1px solid ${active === c ? '#D4AF37' : '#222'}`, padding: '7px 16px', borderRadius: '20px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', transition: 'all 0.2s' }}>{c}</button>
+          <button key={i} onClick={() => setActive(c)} style={{ background: active === c ? '#D4AF37' : '#202024', color: active === c ? '#000' : '#555', border: `1px solid ${active === c ? '#D4AF37' : '#222'}`, padding: '7px 16px', borderRadius: '20px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', transition: 'all 0.2s' }}>{c}</button>
         ))}
       </div>
 
@@ -97,7 +97,7 @@ export default function Templates() {
         ) : (
           <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '24px', maxWidth: '1100px', margin: '0 auto' }}>
             {filtered.map((t, i) => (
-              <div key={i} className="card-hover" style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', overflow: 'hidden' }}>
+              <div key={i} className="card-hover" style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', overflow: 'hidden' }}>
                 <div style={{ cursor: 'pointer', position: 'relative' }} onClick={() => setPreview(t)}>
                   <MiniPreview name={t.name} />
                   <div style={{ position: 'absolute', top: '12px', left: '12px', background: '#D4AF37', color: '#000', fontSize: '10px', fontWeight: '800', padding: '3px 10px', borderRadius: '10px' }}>{t.category}</div>
@@ -124,7 +124,7 @@ export default function Templates() {
 
       {preview && (
         <div onClick={() => setPreview(null)} style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.85)', zIndex: 999, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', backdropFilter: 'blur(8px)' }}>
-          <div onClick={e => e.stopPropagation()} style={{ background: '#111', border: '1px solid #D4AF3744', borderRadius: '16px', overflow: 'hidden', maxWidth: '700px', width: '100%', maxHeight: '85vh', display: 'flex', flexDirection: 'column', animation: 'fadeUp 0.3s ease' }}>
+          <div onClick={e => e.stopPropagation()} style={{ background: '#202024', border: '1px solid #D4AF3744', borderRadius: '16px', overflow: 'hidden', maxWidth: '700px', width: '100%', maxHeight: '85vh', display: 'flex', flexDirection: 'column', animation: 'fadeUp 0.3s ease' }}>
             <div style={{ padding: '16px 20px', borderBottom: '1px solid #1e1e1e', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexShrink: 0 }}>
               <div>
                 <h2 style={{ fontSize: '17px', fontWeight: '800' }}>{preview.name}</h2>
@@ -146,7 +146,7 @@ export default function Templates() {
         </div>
       )}
 
-      <section className="section-pad" style={{ padding: '80px 60px', textAlign: 'center', background: '#0d0d0d' }}>
+      <section className="section-pad" style={{ padding: '80px 60px', textAlign: 'center', background: '#1C1C21' }}>
         <h2 style={{ fontSize: '40px', fontWeight: '900', marginBottom: '16px' }}>Don't see your industry?</h2>
         <p style={{ color: '#555', marginBottom: '32px' }}>Describe your business and Phaero builds a custom site from scratch.</p>
         <button onClick={() => navigate('/onboarding')} className="btn-gold" style={{ padding: '16px 40px', borderRadius: '8px', fontSize: '16px' }}>Start Building Free →</button>

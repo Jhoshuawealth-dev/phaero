@@ -6,7 +6,7 @@ import BuilderDemo from '../components/BuilderDemo'
 export default function Landing() {
   const navigate = useNavigate()
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh', overflowX: 'hidden' }}>
+    <div style={{ background: '#16161A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh', overflowX: 'hidden' }}>
       <Navbar />
 
       {/* HERO */}
@@ -45,7 +45,7 @@ export default function Landing() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="section-pad" style={{ padding: '80px 60px', background: '#0d0d0d' }}>
+      <section className="section-pad" style={{ padding: '80px 60px', background: '#1C1C21' }}>
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <p style={{ color: '#D4AF37', fontSize: '13px', letterSpacing: '2px', fontWeight: '600', marginBottom: '12px' }}>HOW IT WORKS</p>
           <h2 style={{ fontSize: '40px', fontWeight: '800' }}>From idea to live website <span style={{ color: '#D4AF37' }}>in 3 steps</span></h2>
@@ -87,7 +87,7 @@ export default function Landing() {
             { icon: '🛡️', title: 'Auto Error Fixing', desc: 'Phaero Agent fixes its own errors automatically.' },
             { icon: '💻', title: 'Live Code View', desc: 'See, edit, and export your full code anytime.' },
           ].map((f, i) => (
-            <div key={i} className="card-hover" style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px' }}>
+            <div key={i} className="card-hover" style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px' }}>
               <div style={{ fontSize: '28px', marginBottom: '12px' }}>{f.icon}</div>
               <h3 style={{ fontSize: '15px', fontWeight: '700', marginBottom: '6px' }}>{f.title}</h3>
               <p style={{ color: '#555', lineHeight: '1.6', margin: 0, fontSize: '13px' }}>{f.desc}</p>
@@ -100,7 +100,7 @@ export default function Landing() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="section-pad" style={{ padding: '80px 60px', background: '#0d0d0d' }}>
+      <section className="section-pad" style={{ padding: '80px 60px', background: '#1C1C21' }}>
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <p style={{ color: '#D4AF37', fontSize: '13px', letterSpacing: '2px', fontWeight: '600', marginBottom: '12px' }}>TESTIMONIALS</p>
           <h2 style={{ fontSize: '40px', fontWeight: '800' }}>Builders love <span style={{ color: '#D4AF37' }}>Phaero</span></h2>
@@ -111,7 +111,7 @@ export default function Landing() {
             { name: 'Kwame Asante', role: 'Web Designer, Accra', text: 'I build client sites in 20 minutes now and charge my normal rate. Phaero has doubled my income.' },
             { name: 'Fatima Bello', role: 'Clinic Owner, Abuja', text: 'My clinic finally has a professional website with booking. My patients find me on Google now.' },
           ].map((t, i) => (
-            <div key={i} className="card-hover" style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px' }}>
+            <div key={i} className="card-hover" style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px' }}>
               <div style={{ fontSize: '32px', color: '#D4AF37', marginBottom: '12px', lineHeight: 1 }}>"</div>
               <p style={{ color: '#aaa', fontSize: '14px', lineHeight: '1.8', marginBottom: '20px' }}>{t.text}</p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -139,7 +139,7 @@ export default function Landing() {
             { name: 'Starter', price: '$15', sub: 'per month', credits: '150 credits/month', features: ['Everything in Free', 'Custom domain', 'Paystack integration', 'WhatsApp button', 'Badge removal'] },
             { name: 'Elite', price: '$35', sub: 'per month', credits: '350 credits/month', features: ['Everything in Starter', 'Team collaboration', 'Version history', 'Code view', 'WhatsApp support'], highlight: true },
           ].map((p, i) => (
-            <div key={i} className="card-hover" style={{ background: p.highlight ? '#0f0f00' : '#111', border: `1px solid ${p.highlight ? '#D4AF37' : '#1e1e1e'}`, borderRadius: '12px', padding: '28px', position: 'relative' }}>
+            <div key={i} className="card-hover" style={{ background: p.highlight ? '#0f0f00' : '#202024', border: `1px solid ${p.highlight ? '#D4AF37' : '#1e1e1e'}`, borderRadius: '12px', padding: '28px', position: 'relative' }}>
               {p.highlight && <div style={{ position: 'absolute', top: '-13px', left: '50%', transform: 'translateX(-50%)', background: '#D4AF37', color: '#000', fontSize: '10px', fontWeight: '800', padding: '4px 14px', borderRadius: '20px', whiteSpace: 'nowrap' }}>MOST POPULAR</div>}
               <div style={{ fontSize: '14px', fontWeight: '700', color: '#D4AF37', marginBottom: '6px' }}>{p.name}</div>
               <div style={{ fontSize: '36px', fontWeight: '900', marginBottom: '2px' }}>{p.price}</div>
@@ -164,7 +164,7 @@ export default function Landing() {
       </section>
 
       {/* CTA */}
-      <section className="section-pad" style={{ padding: '80px 60px', textAlign: 'center', background: '#0d0d0d', borderTop: '1px solid #1a1a1a' }}>
+      <section className="section-pad" style={{ padding: '80px 60px', textAlign: 'center', background: '#1C1C21', borderTop: '1px solid #1a1a1a' }}>
         <h2 style={{ fontSize: '48px', fontWeight: '900', marginBottom: '16px', letterSpacing: '-1px' }}>Ready to build like a <span className="gold-shimmer">king?</span></h2>
         <p style={{ color: '#555', fontSize: '16px', marginBottom: '40px' }}>Join 10,000+ African businesses already building with Phaero.</p>
         <button onClick={() => navigate('/signup')} className="btn-gold" style={{ padding: '18px 48px', borderRadius: '8px', fontSize: '18px' }}>Start Building Free →</button>

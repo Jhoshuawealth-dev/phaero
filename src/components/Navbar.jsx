@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 60px', borderBottom: '1px solid #1a1a1a', background: '#0A0A0Aee', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 100 }}>
+      <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '12px 60px', borderBottom: '1px solid #1a1a1a', background: '#16161Aee', backdropFilter: 'blur(12px)', position: 'sticky', top: 0, zIndex: 100 }}>
         <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} onClick={() => navigate('/')}>
           <img src={logo} alt="Phaero" style={{ height: '48px', width: 'auto' }} />
         </div>
@@ -36,7 +36,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="mobile-only" style={{ position: 'fixed', top: '64px', left: 0, right: 0, background: '#0d0d0d', borderBottom: '1px solid #1a1a1a', zIndex: 99, padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+        <div className="mobile-only" style={{ position: 'fixed', top: '64px', left: 0, right: 0, background: '#1C1C21', borderBottom: '1px solid #1a1a1a', zIndex: 99, padding: '20px 24px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
           {[{ label: 'Features', path: '/features' }, { label: 'Pricing', path: '/pricing' }, { label: 'Templates', path: '/templates' }, { label: 'Showcase', path: '/showcase' }].map((item, i) => (
             <div key={i} onClick={() => { navigate(item.path); setMenuOpen(false) }} style={{ padding: '14px 16px', color: active(item.path) ? '#D4AF37' : '#aaa', fontSize: '16px', fontWeight: active(item.path) ? '700' : '400', cursor: 'pointer', borderRadius: '8px', background: active(item.path) ? '#1a1a0a' : 'transparent' }}>{item.label}</div>
           ))}

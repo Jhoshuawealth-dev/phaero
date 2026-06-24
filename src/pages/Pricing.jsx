@@ -50,7 +50,7 @@ export default function Pricing() {
   ]
 
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
+    <div style={{ background: '#16161A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
       <Navbar />
 
       <section className="section-pad" style={{ textAlign: 'center', padding: '80px 60px 60px' }}>
@@ -66,7 +66,7 @@ export default function Pricing() {
       <section className="section-pad" style={{ padding: '0 60px 60px' }}>
         <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '24px', maxWidth: '1000px', margin: '0 auto' }}>
           {plans.map((p, i) => (
-            <div key={i} className="card-hover" style={{ background: p.highlight ? '#0f0f00' : '#111', border: `1px solid ${p.highlight ? '#D4AF37' : '#1e1e1e'}`, borderRadius: '14px', padding: '32px', position: 'relative' }}>
+            <div key={i} className="card-hover" style={{ background: p.highlight ? '#0f0f00' : '#202024', border: `1px solid ${p.highlight ? '#D4AF37' : '#1e1e1e'}`, borderRadius: '14px', padding: '32px', position: 'relative' }}>
               {p.highlight && (
                 <div style={{ position: 'absolute', top: '-13px', left: '50%', transform: 'translateX(-50%)', background: '#D4AF37', color: '#000', fontSize: '10px', fontWeight: '800', padding: '4px 14px', borderRadius: '20px', whiteSpace: 'nowrap' }}>MOST POPULAR</div>
               )}
@@ -102,7 +102,7 @@ export default function Pricing() {
               { icon: '⚡', title: 'Keep building past day 5', desc: 'Free credits run out after 5 days. Starter keeps your project moving.' },
               { icon: '💻', title: 'More credits, more building', desc: '150 credits a month plus daily bonus credits to build faster.' },
             ].map((item, i) => (
-              <div key={i} style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px', display: 'flex', gap: '14px' }}>
+              <div key={i} style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px', display: 'flex', gap: '14px' }}>
                 <span style={{ fontSize: '24px', flexShrink: 0 }}>{item.icon}</span>
                 <div>
                   <div style={{ fontSize: '14px', fontWeight: '700', marginBottom: '4px' }}>{item.title}</div>
@@ -130,7 +130,7 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="section-pad" style={{ padding: '80px 60px', textAlign: 'center', background: '#0d0d0d' }}>
+      <section className="section-pad" style={{ padding: '80px 60px', textAlign: 'center', background: '#1C1C21' }}>
         <h2 style={{ fontSize: '40px', fontWeight: '900', marginBottom: '16px' }}>Start free. Upgrade when ready.</h2>
         <p style={{ color: '#555', marginBottom: '32px' }}>No card required to start.</p>
         <button onClick={() => navigate('/signup')} className="btn-gold" style={{ padding: '16px 40px', borderRadius: '8px', fontSize: '16px' }}>Start Building Free →</button>

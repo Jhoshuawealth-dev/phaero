@@ -38,7 +38,7 @@ export default function Showcase() {
   }
 
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
+    <div style={{ background: '#16161A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
       <Navbar />
 
       <section className="section-pad" style={{ textAlign: 'center', padding: '80px 60px 40px' }}>
@@ -48,7 +48,7 @@ export default function Showcase() {
         <button onClick={() => navigate('/dashboard')} className="btn-gold" style={{ padding: '13px 28px', borderRadius: '8px', fontSize: '14px' }}>Submit Your Site →</button>
       </section>
 
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '48px', padding: '28px 60px', background: '#0d0d0d', borderTop: '1px solid #1a1a1a', borderBottom: '1px solid #1a1a1a', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '48px', padding: '28px 60px', background: '#1C1C21', borderTop: '1px solid #1a1a1a', borderBottom: '1px solid #1a1a1a', flexWrap: 'wrap' }}>
         {[
           { number: `${projects.length}`, label: 'Sites Showcased' },
           { number: `${projects.reduce((sum, p) => sum + (p.likes_count || 0), 0)}`, label: 'Total Votes' },
@@ -65,14 +65,14 @@ export default function Showcase() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <div style={{ position: 'relative' }}>
             <span style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)', color: '#444', fontSize: '16px' }}>🔍</span>
-            <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search by name or category..." className="input-gold" style={{ width: '100%', background: '#111', border: '1px solid #1e1e1e', color: '#fff', padding: '11px 14px 11px 40px', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box' }} />
+            <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search by name or category..." className="input-gold" style={{ width: '100%', background: '#202024', border: '1px solid #1e1e1e', color: '#fff', padding: '11px 14px 11px 40px', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box' }} />
           </div>
         </div>
       </div>
 
       <div className="section-pad" style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap', padding: '24px 60px' }}>
         {categories.map((c, i) => (
-          <button key={i} onClick={() => setActive(c)} style={{ background: active === c ? '#D4AF37' : '#111', color: active === c ? '#000' : '#555', border: `1px solid ${active === c ? '#D4AF37' : '#222'}`, padding: '7px 16px', borderRadius: '20px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', transition: 'all 0.2s' }}>{c}</button>
+          <button key={i} onClick={() => setActive(c)} style={{ background: active === c ? '#D4AF37' : '#202024', color: active === c ? '#000' : '#555', border: `1px solid ${active === c ? '#D4AF37' : '#222'}`, padding: '7px 16px', borderRadius: '20px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', transition: 'all 0.2s' }}>{c}</button>
         ))}
       </div>
 
@@ -89,7 +89,7 @@ export default function Showcase() {
           <>
             <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '24px', maxWidth: '1100px', margin: '0 auto' }}>
               {filtered.slice(0, visible).map((site) => (
-                <div key={site.id} className="card-hover" style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', overflow: 'hidden' }}>
+                <div key={site.id} className="card-hover" style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', overflow: 'hidden' }}>
                   <div style={{ height: '200px', background: site.color || '#8B4513', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <div style={{ textAlign: 'center', padding: '20px' }}>
                       <div style={{ width: '120px', height: '10px', background: '#D4AF37', borderRadius: '3px', margin: '0 auto 8px' }} />
@@ -125,7 +125,7 @@ export default function Showcase() {
         )}
       </section>
 
-      <section className="section-pad" style={{ padding: '80px 60px', textAlign: 'center', background: '#0d0d0d' }}>
+      <section className="section-pad" style={{ padding: '80px 60px', textAlign: 'center', background: '#1C1C21' }}>
         <h2 style={{ fontSize: '40px', fontWeight: '900', marginBottom: '16px' }}>Your site belongs <span className="gold-shimmer">here</span></h2>
         <p style={{ color: '#555', marginBottom: '32px' }}>Publish your site and submit it to the community showcase.</p>
         <button onClick={() => navigate('/dashboard')} className="btn-gold" style={{ padding: '16px 40px', borderRadius: '8px', fontSize: '16px' }}>Go to Dashboard →</button>

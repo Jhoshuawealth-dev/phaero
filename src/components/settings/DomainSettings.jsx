@@ -27,7 +27,7 @@ export default function DomainSettings() {
 
       <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
         {projects.map(p => (
-          <div key={p.id} style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '10px', padding: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div key={p.id} style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '10px', padding: '16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div>
               <div style={{ fontSize: '13px', fontWeight: '700', marginBottom: '2px' }}>{p.name}</div>
               <div style={{ fontSize: '12px', color: '#555' }}>{p.subdomain}</div>

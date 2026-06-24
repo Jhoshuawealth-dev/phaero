@@ -14,7 +14,7 @@ export default function Contact() {
   }
 
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
+    <div style={{ background: '#16161A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
       <Navbar />
       <section className="section-pad" style={{ padding: '80px 60px', textAlign: 'center' }}>
         <p style={{ color: '#D4AF37', fontSize: '13px', letterSpacing: '2px', fontWeight: '600', marginBottom: '12px' }}>CONTACT</p>
@@ -33,7 +33,7 @@ export default function Contact() {
               { icon: '📧', title: 'Email Support', desc: 'hello@phaero.app — we reply within 24 hours.', action: 'Send Email', color: '#D4AF37' },
               { icon: '🐦', title: 'Twitter / X', desc: 'Follow us @phaeroapp for updates and tips.', action: 'Follow us', color: '#1DA1F2' },
             ].map((c, i) => (
-              <div key={i} className="card-hover" style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px', marginBottom: '14px', display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
+              <div key={i} className="card-hover" style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px', marginBottom: '14px', display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
                 <div style={{ fontSize: '28px', flexShrink: 0 }}>{c.icon}</div>
                 <div style={{ flex: 1 }}>
                   <div style={{ fontSize: '15px', fontWeight: '700', marginBottom: '4px' }}>{c.title}</div>
@@ -62,12 +62,12 @@ export default function Contact() {
                 ].map((field, i) => (
                   <div key={i}>
                     <label style={{ fontSize: '12px', color: '#555', fontWeight: '600', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>{field.label.toUpperCase()}</label>
-                    <input type={field.type} placeholder={field.placeholder} value={form[field.key]} onChange={e => setForm({ ...form, [field.key]: e.target.value })} className="input-gold" style={{ width: '100%', background: '#111', border: '1px solid #1e1e1e', color: '#fff', padding: '12px 14px', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box' }} />
+                    <input type={field.type} placeholder={field.placeholder} value={form[field.key]} onChange={e => setForm({ ...form, [field.key]: e.target.value })} className="input-gold" style={{ width: '100%', background: '#202024', border: '1px solid #1e1e1e', color: '#fff', padding: '12px 14px', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box' }} />
                   </div>
                 ))}
                 <div>
                   <label style={{ fontSize: '12px', color: '#555', fontWeight: '600', display: 'block', marginBottom: '6px', letterSpacing: '0.5px' }}>MESSAGE</label>
-                  <textarea placeholder="Tell us what you need help with..." rows={5} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className="input-gold" style={{ width: '100%', background: '#111', border: '1px solid #1e1e1e', color: '#fff', padding: '12px 14px', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box', resize: 'none', fontFamily: 'Inter, sans-serif' }} />
+                  <textarea placeholder="Tell us what you need help with..." rows={5} value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} className="input-gold" style={{ width: '100%', background: '#202024', border: '1px solid #1e1e1e', color: '#fff', padding: '12px 14px', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box', resize: 'none', fontFamily: 'Inter, sans-serif' }} />
                 </div>
                 <button onClick={handleSubmit} className="btn-gold" style={{ padding: '13px', borderRadius: '8px', fontSize: '15px' }}>Send Message →</button>
               </div>

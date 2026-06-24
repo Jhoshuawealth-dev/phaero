@@ -15,7 +15,7 @@ export default function GeneralSettings() {
       <h1 style={{ fontSize: '22px', fontWeight: '800', marginBottom: '4px' }}>General</h1>
       <p style={{ color: '#555', fontSize: '13px', marginBottom: '32px' }}>An overview of all your projects on Phaero.</p>
 
-      <div style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px', marginBottom: '20px' }}>
+      <div style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px', marginBottom: '20px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '16px' }}>
           {[
             { label: 'Total Projects', value: projects.length },
@@ -23,7 +23,7 @@ export default function GeneralSettings() {
             { label: 'Drafts', value: projects.filter(p => p.status !== 'published').length },
             { label: 'In Showcase', value: projects.filter(p => p.show_in_showcase).length },
           ].map((s, i) => (
-            <div key={i} style={{ background: '#0d0d0d', borderRadius: '8px', padding: '14px' }}>
+            <div key={i} style={{ background: '#1C1C21', borderRadius: '8px', padding: '14px' }}>
               <div style={{ fontSize: '20px', fontWeight: '800', color: '#D4AF37' }}>{s.value}</div>
               <div style={{ fontSize: '11px', color: '#555' }}>{s.label}</div>
             </div>
@@ -31,7 +31,7 @@ export default function GeneralSettings() {
         </div>
       </div>
 
-      <div style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px' }}>
+      <div style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px' }}>
         <p style={{ fontSize: '13px', fontWeight: '700', marginBottom: '12px' }}>All Projects</p>
         {projects.length === 0 ? (
           <p style={{ color: '#555', fontSize: '13px' }}>No projects yet.</p>

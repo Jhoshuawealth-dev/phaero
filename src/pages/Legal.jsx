@@ -48,13 +48,13 @@ export default function Legal() {
   const data = content[page] || content.privacy
 
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
+    <div style={{ background: '#16161A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
       <Navbar />
       <section className="section-pad" style={{ padding: '80px 60px' }}>
         <div style={{ maxWidth: '720px', margin: '0 auto' }}>
           <div style={{ display: 'flex', gap: '10px', marginBottom: '40px', flexWrap: 'wrap' }}>
             {['privacy', 'terms', 'cookies'].map(p => (
-              <button key={p} onClick={() => navigate(`/${p}`)} style={{ background: page === p ? '#D4AF37' : '#111', color: page === p ? '#000' : '#555', border: `1px solid ${page === p ? '#D4AF37' : '#222'}`, padding: '8px 18px', borderRadius: '20px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', textTransform: 'capitalize', transition: 'all 0.2s' }}>{p}</button>
+              <button key={p} onClick={() => navigate(`/${p}`)} style={{ background: page === p ? '#D4AF37' : '#202024', color: page === p ? '#000' : '#555', border: `1px solid ${page === p ? '#D4AF37' : '#222'}`, padding: '8px 18px', borderRadius: '20px', fontSize: '13px', fontWeight: '600', cursor: 'pointer', textTransform: 'capitalize', transition: 'all 0.2s' }}>{p}</button>
             ))}
           </div>
           <h1 style={{ fontSize: '40px', fontWeight: '900', marginBottom: '8px' }}>{data.title}</h1>

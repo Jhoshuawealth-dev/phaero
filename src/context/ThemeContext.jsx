@@ -4,10 +4,10 @@ const ThemeContext = createContext(null)
 
 const themes = {
   dark: {
-    bg: '#0A0A0A', bgSecondary: '#0d0d0d', bgCard: '#111', bgCardHover: '#161616',
+    bg: '#16161A', bgSecondary: '#1C1C21', bgCard: '#202024', bgCardHover: '#161616',
     border: '#1e1e1e', borderLight: '#2a2a2a', text: '#fff', textMuted: '#888',
     textFaint: '#555', textFainter: '#333', gold: '#D4AF37', goldBg: '#1a1a0a',
-    inputBg: '#111', overlayBg: 'rgba(0,0,0,0.85)'
+    inputBg: '#202024', overlayBg: 'rgba(0,0,0,0.85)'
   },
   light: {
     bg: '#FAFAF8', bgSecondary: '#F2F0EA', bgCard: '#FFFFFF', bgCardHover: '#F7F5EF',

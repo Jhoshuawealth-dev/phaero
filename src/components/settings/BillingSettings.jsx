@@ -37,7 +37,7 @@ export default function BillingSettings() {
       )}
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '24px' }}>
-        <div style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px' }}>
+        <div style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
             <span style={{ fontSize: '20px' }}>👑</span>
             <div>
@@ -55,14 +55,14 @@ export default function BillingSettings() {
           <div style={{ fontSize: '11px', color: '#444' }}>Resets {plan === 'free' ? 'daily' : 'monthly'}</div>
         </div>
 
-        <div style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px' }}>
+        <div style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px' }}>
           <UsageChart userId={user?.id} />
         </div>
       </div>
 
       <p style={{ fontSize: '13px', fontWeight: '700', marginBottom: '12px' }}>Available Plans</p>
       {plans.map((p, i) => (
-        <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', background: p.popular ? '#1a1a0a' : '#111', border: `1px solid ${p.popular ? '#D4AF3744' : '#1e1e1e'}`, borderRadius: '10px', marginBottom: '8px' }}>
+        <div key={i} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', background: p.popular ? '#1a1a0a' : '#202024', border: `1px solid ${p.popular ? '#D4AF3744' : '#1e1e1e'}`, borderRadius: '10px', marginBottom: '8px' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '2px' }}>
               <span style={{ fontSize: '14px', fontWeight: '700' }}>{p.name}</span>

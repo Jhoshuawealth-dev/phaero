@@ -11,7 +11,7 @@ import AgentsConnectors from '../components/AgentsConnectors'
 function Sidebar({ tab, setTab, navigate, profile, signOut, mobileMenuOpen, setMobileMenuOpen }) {
   const initial = profile?.full_name ? profile.full_name[0].toUpperCase() : 'U'
   return (
-    <div className={`dashboard-sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`} style={{ width: '240px', background: '#0d0d0d', borderRight: '1px solid #1a1a1a', display: 'flex', flexDirection: 'column', padding: '0', minHeight: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 50 }}>
+    <div className={`dashboard-sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`} style={{ width: '240px', background: '#1C1C21', borderRight: '1px solid #1a1a1a', display: 'flex', flexDirection: 'column', padding: '0', minHeight: '100vh', position: 'fixed', top: 0, left: 0, zIndex: 50 }}>
       <div className="dashboard-sidebar-logo" style={{ padding: '20px', borderBottom: '1px solid #1a1a1a', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <img src={logo} alt="Phaero" style={{ height: '44px', cursor: 'pointer' }} onClick={() => navigate('/')} />
         <button className="dashboard-mobile-close" onClick={() => setMobileMenuOpen(false)} style={{ display: 'none', background: '#1a1a1a', border: '1px solid #222', color: '#fff', width: '28px', height: '28px', borderRadius: '6px', fontSize: '14px', cursor: 'pointer' }}>✕</button>
@@ -43,7 +43,7 @@ function Sidebar({ tab, setTab, navigate, profile, signOut, mobileMenuOpen, setM
         ))}
       </div>
 
-      <div className="dashboard-sidebar-credits" style={{ margin: '0 12px 12px', background: '#111', border: '1px solid #1e1e1e', borderRadius: '10px', padding: '14px' }}>
+      <div className="dashboard-sidebar-credits" style={{ margin: '0 12px 12px', background: '#202024', border: '1px solid #1e1e1e', borderRadius: '10px', padding: '14px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
           <span style={{ fontSize: '12px', color: '#555', fontWeight: '600' }}>CREDITS</span>
           <span style={{ fontSize: '12px', color: '#D4AF37', fontWeight: '700' }}>{profile?.credits ?? 0} / 10</span>
@@ -92,8 +92,8 @@ export default function Dashboard() {
   const filtered = projects.filter(p => p.name.toLowerCase().includes(search.toLowerCase()))
 
   return (
-    <div className="dashboard-outer" style={{ background: '#0A0A0A', color: '#fff', minHeight: '100vh', fontFamily: 'Inter, sans-serif', display: 'flex' }}>
-      <button className="dashboard-mobile-toggle" onClick={() => setMobileMenuOpen(true)} style={{ display: 'none', position: 'fixed', top: '16px', left: '16px', zIndex: 60, background: '#111', border: '1px solid #222', color: '#fff', width: '40px', height: '40px', borderRadius: '8px', fontSize: '18px', cursor: 'pointer' }}>☰</button>
+    <div className="dashboard-outer" style={{ background: '#16161A', color: '#fff', minHeight: '100vh', fontFamily: 'Inter, sans-serif', display: 'flex' }}>
+      <button className="dashboard-mobile-toggle" onClick={() => setMobileMenuOpen(true)} style={{ display: 'none', position: 'fixed', top: '16px', left: '16px', zIndex: 60, background: '#202024', border: '1px solid #222', color: '#fff', width: '40px', height: '40px', borderRadius: '8px', fontSize: '18px', cursor: 'pointer' }}>☰</button>
       <Sidebar tab={tab} setTab={setTab} navigate={navigate} profile={profile} signOut={signOut} mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen} />
 
       <div className="dashboard-main-content" style={{ marginLeft: '240px', flex: 1, padding: '40px', minHeight: '100vh' }}>
@@ -109,8 +109,8 @@ export default function Dashboard() {
             </div>
 
             <div style={{ display: 'flex', gap: '12px', marginBottom: '24px' }}>
-              <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search projects..." style={{ flex: 1, background: '#111', border: '1px solid #1e1e1e', color: '#fff', padding: '10px 16px', borderRadius: '8px', fontSize: '14px', outline: 'none' }} />
-              <select value={sort} onChange={e => setSort(e.target.value)} style={{ background: '#111', border: '1px solid #1e1e1e', color: '#aaa', padding: '10px 16px', borderRadius: '8px', fontSize: '14px', outline: 'none', cursor: 'pointer' }}>
+              <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search projects..." style={{ flex: 1, background: '#202024', border: '1px solid #1e1e1e', color: '#fff', padding: '10px 16px', borderRadius: '8px', fontSize: '14px', outline: 'none' }} />
+              <select value={sort} onChange={e => setSort(e.target.value)} style={{ background: '#202024', border: '1px solid #1e1e1e', color: '#aaa', padding: '10px 16px', borderRadius: '8px', fontSize: '14px', outline: 'none', cursor: 'pointer' }}>
                 <option value="recent">Recently Updated</option>
                 <option value="name">Name A–Z</option>
               </select>
@@ -119,7 +119,7 @@ export default function Dashboard() {
             {loadingProjects ? (
               <div style={{ textAlign: 'center', padding: '80px 0', color: '#444' }}>Loading your projects...</div>
             ) : filtered.length === 0 ? (
-              <div style={{ background: '#0d0d0d', border: '1px dashed #222', borderRadius: '14px', padding: '60px 24px', textAlign: 'center' }}>
+              <div style={{ background: '#1C1C21', border: '1px dashed #222', borderRadius: '14px', padding: '60px 24px', textAlign: 'center' }}>
                 <div style={{ fontSize: '48px', marginBottom: '16px' }}>👑</div>
                 <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '8px' }}>No projects yet</h3>
                 <p style={{ color: '#555', fontSize: '14px', marginBottom: '24px' }}>Describe your business and Phaero will build your first site in seconds.</p>
@@ -128,7 +128,7 @@ export default function Dashboard() {
             ) : (
               <div className="dashboard-projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px' }}>
                 {filtered.map((p) => (
-                  <div key={p.id} style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', overflow: 'hidden', cursor: 'pointer' }}
+                  <div key={p.id} style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', overflow: 'hidden', cursor: 'pointer' }}
                     onMouseEnter={e => e.currentTarget.style.borderColor = '#D4AF37'}
                     onMouseLeave={e => e.currentTarget.style.borderColor = '#1e1e1e'}>
                     <div style={{ height: '150px', background: p.color, position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }} onClick={() => navigate('/builder', { state: { projectId: p.id, projectName: p.name } })}>
@@ -150,7 +150,7 @@ export default function Dashboard() {
                   </div>
                 ))}
 
-                <div onClick={() => navigate('/onboarding')} style={{ background: '#0d0d0d', border: '1px dashed #222', borderRadius: '12px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '260px', cursor: 'pointer', gap: '12px' }}>
+                <div onClick={() => navigate('/onboarding')} style={{ background: '#1C1C21', border: '1px dashed #222', borderRadius: '12px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '260px', cursor: 'pointer', gap: '12px' }}>
                   <div style={{ width: '48px', height: '48px', borderRadius: '50%', border: '1px dashed #333', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '24px', color: '#333' }}>+</div>
                   <div style={{ textAlign: 'center' }}>
                     <div style={{ color: '#555', fontSize: '14px', fontWeight: '600', marginBottom: '4px' }}>New Project</div>
@@ -166,7 +166,7 @@ export default function Dashboard() {
           <div style={{ maxWidth: '680px' }}>
             <h1 style={{ fontSize: '26px', fontWeight: '800', marginBottom: '8px' }}>Billing</h1>
             <p style={{ color: '#555', fontSize: '14px', marginBottom: '32px' }}>Manage your plan and credit usage.</p>
-            <div style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px' }}>
+            <div style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div>
                   <div style={{ fontSize: '12px', color: '#555', fontWeight: '600', marginBottom: '6px' }}>CURRENT PLAN</div>
@@ -186,11 +186,11 @@ export default function Dashboard() {
             <h1 style={{ fontSize: '28px', fontWeight: '800', marginBottom: '32px' }}>Settings</h1>
             <div style={{ marginBottom: '20px' }}>
               <label style={{ fontSize: '13px', color: '#555', fontWeight: '600', display: 'block', marginBottom: '8px' }}>Full Name</label>
-              <input defaultValue={profile?.full_name} style={{ width: '100%', background: '#111', border: '1px solid #222', color: '#fff', padding: '12px 16px', borderRadius: '8px', fontSize: '14px', outline: 'none', boxSizing: 'border-box' }} />
+              <input defaultValue={profile?.full_name} style={{ width: '100%', background: '#202024', border: '1px solid #222', color: '#fff', padding: '12px 16px', borderRadius: '8px', fontSize: '14px', outline: 'none', boxSizing: 'border-box' }} />
             </div>
             <div style={{ marginBottom: '20px' }}>
               <label style={{ fontSize: '13px', color: '#555', fontWeight: '600', display: 'block', marginBottom: '8px' }}>Email</label>
-              <input defaultValue={profile?.email} disabled style={{ width: '100%', background: '#0d0d0d', border: '1px solid #222', color: '#555', padding: '12px 16px', borderRadius: '8px', fontSize: '14px', outline: 'none', boxSizing: 'border-box' }} />
+              <input defaultValue={profile?.email} disabled style={{ width: '100%', background: '#1C1C21', border: '1px solid #222', color: '#555', padding: '12px 16px', borderRadius: '8px', fontSize: '14px', outline: 'none', boxSizing: 'border-box' }} />
             </div>
             <button style={{ background: '#D4AF37', color: '#000', border: 'none', padding: '12px 32px', borderRadius: '8px', fontWeight: '700', cursor: 'pointer' }}>Save Changes</button>
 

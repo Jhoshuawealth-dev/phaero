@@ -27,7 +27,7 @@ export default function AccountSettings() {
       <h1 style={{ fontSize: '22px', fontWeight: '800', marginBottom: '4px' }}>Your Account</h1>
       <p style={{ color: '#555', fontSize: '13px', marginBottom: '32px' }}>Manage your personal information and account.</p>
 
-      <div style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px', marginBottom: '20px' }}>
+      <div style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px', marginBottom: '20px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
           <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: '#D4AF3733', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '22px', fontWeight: '700', color: '#D4AF37' }}>
             {fullName ? fullName[0].toUpperCase() : 'U'}
@@ -39,7 +39,7 @@ export default function AccountSettings() {
         </div>
 
         <label style={{ fontSize: '12px', color: '#666', fontWeight: '600', display: 'block', marginBottom: '8px' }}>Full Name</label>
-        <input value={fullName} onChange={e => setFullName(e.target.value)} className="input-gold" style={{ width: '100%', background: '#0d0d0d', border: '1px solid #222', color: '#fff', padding: '12px 14px', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box', marginBottom: '16px' }} />
+        <input value={fullName} onChange={e => setFullName(e.target.value)} className="input-gold" style={{ width: '100%', background: '#1C1C21', border: '1px solid #222', color: '#fff', padding: '12px 14px', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box', marginBottom: '16px' }} />
 
         <label style={{ fontSize: '12px', color: '#666', fontWeight: '600', display: 'block', marginBottom: '8px' }}>Email</label>
         <input value={user?.email || ''} disabled style={{ width: '100%', background: '#0a0a0a', border: '1px solid #1a1a1a', color: '#555', padding: '12px 14px', borderRadius: '8px', fontSize: '14px', boxSizing: 'border-box' }} />

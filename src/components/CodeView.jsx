@@ -55,7 +55,7 @@ export default function CodeView() {
   return (
     <div style={{ display: 'flex', width: '100%', height: '100%', background: '#1e1e1e' }}>
       {/* File tabs sidebar */}
-      <div style={{ width: '200px', flexShrink: 0, background: '#0d0d0d', borderRight: '1px solid #1a1a1a', padding: '12px 8px', height: '100%', overflowY: 'auto' }}>
+      <div style={{ width: '200px', flexShrink: 0, background: '#1C1C21', borderRight: '1px solid #1a1a1a', padding: '12px 8px', height: '100%', overflowY: 'auto' }}>
         <p style={{ fontSize: '10px', color: '#444', fontWeight: '700', letterSpacing: '1px', padding: '4px 8px', marginBottom: '8px' }}>FILES</p>
         {Object.keys(files).map((file) => (
           <div key={file} onClick={() => setActiveFile(file)} style={{

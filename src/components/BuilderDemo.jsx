@@ -100,7 +100,7 @@ export default function BuilderDemo() {
       <div style={{ position: 'absolute', bottom: '-40px', left: '50%', transform: 'translateX(-50%)', width: '70%', height: '60px', background: '#D4AF37', borderRadius: '50%', filter: 'blur(60px)', opacity: 0.25 }} />
 
       {/* Browser chrome */}
-      <div style={{ background: '#111', border: '1px solid #2a2a2a', borderRadius: '12px', overflow: 'hidden', position: 'relative', zIndex: 1 }}>
+      <div style={{ background: '#202024', border: '1px solid #2a2a2a', borderRadius: '12px', overflow: 'hidden', position: 'relative', zIndex: 1 }}>
 
         {/* Title bar */}
         <div style={{ background: '#1a1a1a', padding: '12px 16px', display: 'flex', alignItems: 'center', gap: '8px', borderBottom: '1px solid #2a2a2a' }}>
@@ -141,7 +141,7 @@ export default function BuilderDemo() {
           </div>
 
           {/* Preview */}
-          <div style={{ background: '#0d0d0d', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+          <div style={{ background: '#1C1C21', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
             {visibleSections.length === 0 && phase !== 'building' && (
               <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#333', fontSize: '13px' }}>
                 {phase === 'typing' ? 'Waiting for prompt...' : 'Building your site...'}
@@ -150,7 +150,7 @@ export default function BuilderDemo() {
 
             {/* Hero section */}
             {visibleSections.includes('hero') && (
-              <div style={{ background: '#111', padding: '16px', borderBottom: '1px solid #1a1a1a', animation: 'fadeIn 0.5s ease' }}>
+              <div style={{ background: '#202024', padding: '16px', borderBottom: '1px solid #1a1a1a', animation: 'fadeIn 0.5s ease' }}>
                 <div style={{ width: '70%', height: '10px', background: '#D4AF37', borderRadius: '3px', marginBottom: '6px' }} />
                 <div style={{ width: '50%', height: '6px', background: '#333', borderRadius: '3px', marginBottom: '4px' }} />
                 <div style={{ width: '40%', height: '6px', background: '#333', borderRadius: '3px' }} />

@@ -4,7 +4,7 @@ import logo from '../assets/logo.png'
 export default function Footer() {
   const navigate = useNavigate()
   return (
-    <footer style={{ padding: '60px 60px 32px', borderTop: '1px solid #1a1a1a', background: '#0A0A0A' }}>
+    <footer style={{ padding: '60px 60px 32px', borderTop: '1px solid #1a1a1a', background: '#16161A' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '48px', flexWrap: 'wrap', gap: '40px' }}>
         <div style={{ maxWidth: '240px' }}>
           <div style={{ cursor: 'pointer', marginBottom: '12px' }} onClick={() => navigate('/')}>

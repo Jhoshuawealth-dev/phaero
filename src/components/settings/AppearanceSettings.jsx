@@ -21,7 +21,7 @@ export default function AppearanceSettings() {
             onClick={() => setMode(opt.key)}
             style={{
               display: 'flex', alignItems: 'center', gap: '14px', padding: '16px',
-              background: mode === opt.key ? '#1a1a0a' : '#111',
+              background: mode === opt.key ? '#1a1a0a' : '#202024',
               border: `1px solid ${mode === opt.key ? '#D4AF3766' : '#1e1e1e'}`,
               borderRadius: '12px', cursor: 'pointer', transition: 'all 0.15s',
             }}

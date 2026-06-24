@@ -5,7 +5,7 @@ export default function DraggableBlock({ id, label }) {
 
   return (
     <div ref={setNodeRef} {...listeners} {...attributes} style={{
-      background: '#111', border: '1px solid #1a1a1a', borderRadius: '6px', padding: '9px 12px',
+      background: '#202024', border: '1px solid #1a1a1a', borderRadius: '6px', padding: '9px 12px',
       marginBottom: '5px', fontSize: '12px', color: '#666', cursor: isDragging ? 'grabbing' : 'grab',
       display: 'flex', alignItems: 'center', gap: '8px', transition: 'all 0.15s',
       opacity: isDragging ? 0.4 : 1,

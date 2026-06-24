@@ -29,7 +29,7 @@ export default function GitSettings() {
       <h1 style={{ fontSize: '22px', fontWeight: '800', marginBottom: '4px' }}>GitHub</h1>
       <p style={{ color: '#555', fontSize: '13px', marginBottom: '32px' }}>Connect your GitHub account to push projects as real repositories.</p>
 
-      <div style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px', marginBottom: '24px' }}>
+      <div style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px', marginBottom: '24px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
             <span style={{ fontSize: '24px' }}>🐙</span>
@@ -51,13 +51,13 @@ export default function GitSettings() {
 
       <p style={{ fontSize: '13px', fontWeight: '700', marginBottom: '12px' }}>Connected Projects</p>
       {projects.length === 0 ? (
-        <div style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px', textAlign: 'center' }}>
+        <div style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px', textAlign: 'center' }}>
           <p style={{ color: '#666', fontSize: '13px' }}>No projects pushed to GitHub yet. Open a project in Builder and click GitHub to push it.</p>
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
           {projects.map(p => (
-            <div key={p.id} style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '10px', padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div key={p.id} style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '10px', padding: '14px 16px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
                 <div style={{ fontSize: '13px', fontWeight: '700' }}>{p.name}</div>
                 <a href={p.github_url} target="_blank" rel="noreferrer" style={{ color: '#D4AF37', fontSize: '12px', textDecoration: 'none' }}>{p.github_repo}</a>

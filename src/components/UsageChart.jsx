@@ -36,7 +36,7 @@ export default function UsageChart({ userId }) {
   if (loading) return <div style={{ color: '#444', fontSize: '13px', padding: '20px 0' }}>Loading activity...</div>
 
   return (
-    <div style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px' }}>
+    <div style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px' }}>
       <div style={{ fontSize: '13px', fontWeight: '700', color: '#fff', marginBottom: '4px' }}>Projects Created — Last 7 Days</div>
       <div style={{ fontSize: '11px', color: '#555', marginBottom: '20px' }}>Total: {projects.length} project{projects.length !== 1 ? 's' : ''} all time</div>
       <div style={{ display: 'flex', alignItems: 'flex-end', gap: '8px', height: '100px' }}>

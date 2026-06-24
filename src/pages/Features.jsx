@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 export default function Features() {
   const navigate = useNavigate()
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
+    <div style={{ background: '#16161A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
       <Navbar />
       <section style={{ textAlign: 'center', padding: '80px 60px 60px' }}>
         <p style={{ color: '#D4AF37', fontSize: '13px', letterSpacing: '2px', fontWeight: '600', marginBottom: '12px' }}>FEATURES</p>
@@ -40,13 +40,13 @@ export default function Features() {
           { icon: '👥', title: 'Team Collaboration', desc: 'Invite teammates. Build together. Manage multiple client projects from one account.' },
         ]},
       ].map((section, si) => (
-        <section key={si} style={{ padding: '60px 60px', background: si % 2 === 0 ? '#0A0A0A' : '#0d0d0d' }}>
+        <section key={si} style={{ padding: '60px 60px', background: si % 2 === 0 ? '#16161A' : '#1C1C21' }}>
           <h2 style={{ fontSize: '28px', fontWeight: '800', marginBottom: '32px', paddingLeft: '0', maxWidth: '1100px', margin: '0 auto 32px' }}>
             <span style={{ color: '#D4AF37' }}>{section.category}</span>
           </h2>
           <div className="grid-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px', maxWidth: '1100px', margin: '0 auto' }}>
             {section.features.map((f, i) => (
-              <div key={i} style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px' }}>
+              <div key={i} style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '24px' }}>
                 <div style={{ fontSize: '28px', marginBottom: '12px' }}>{f.icon}</div>
                 <h3 style={{ fontSize: '15px', fontWeight: '700', marginBottom: '8px' }}>{f.title}</h3>
                 <p style={{ color: '#555', fontSize: '13px', lineHeight: '1.7', margin: 0 }}>{f.desc}</p>
@@ -56,7 +56,7 @@ export default function Features() {
         </section>
       ))}
 
-      <section style={{ padding: '80px 60px', textAlign: 'center', background: '#0d0d0d' }}>
+      <section style={{ padding: '80px 60px', textAlign: 'center', background: '#1C1C21' }}>
         <h2 style={{ fontSize: '44px', fontWeight: '900', marginBottom: '16px' }}>Ready to build like a <span style={{ color: '#D4AF37' }}>king?</span></h2>
         <p style={{ color: '#555', marginBottom: '32px' }}>Join 10,000+ African businesses already on Phaero.</p>
         <button onClick={() => navigate('/signup')} style={{ background: '#D4AF37', color: '#000', border: 'none', padding: '16px 40px', borderRadius: '8px', fontWeight: '800', fontSize: '16px', cursor: 'pointer' }}>Start Building Free →</button>

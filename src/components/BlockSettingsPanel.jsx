@@ -6,7 +6,7 @@ export default function BlockSettingsPanel({ block, onUpdate, onClose }) {
   const update = (field, value) => onUpdate({ ...block.data, [field]: value })
 
   return (
-    <div style={{ background: '#0d0d0d', borderLeft: '1px solid #1a1a1a', padding: '16px', height: '100%', overflowY: 'auto', width: '240px' }}>
+    <div style={{ background: '#1C1C21', borderLeft: '1px solid #1a1a1a', padding: '16px', height: '100%', overflowY: 'auto', width: '240px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
         <div>
           <p style={{ fontSize: '10px', color: '#444', fontWeight: '700', letterSpacing: '1px', marginBottom: '2px' }}>EDITING</p>

@@ -29,7 +29,7 @@ export default function ForgotPassword() {
   }
 
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Inter, sans-serif', backgroundImage: 'radial-gradient(circle at 1px 1px, #D4AF3706 1px, transparent 0)', backgroundSize: '40px 40px' }}>
+    <div style={{ background: '#16161A', color: '#fff', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Inter, sans-serif', backgroundImage: 'radial-gradient(circle at 1px 1px, #D4AF3706 1px, transparent 0)', backgroundSize: '40px 40px' }}>
       <div style={{ width: '100%', maxWidth: '420px', padding: '0 24px' }}>
 
         <div style={{ textAlign: 'center', marginBottom: '36px' }}>
@@ -56,7 +56,7 @@ export default function ForgotPassword() {
               placeholder="Email address"
               type="email"
               className="input-gold"
-              style={{ background: '#111', border: '1px solid #1e1e1e', color: '#fff', padding: '13px 16px', borderRadius: '8px', fontSize: '14px', width: '100%', boxSizing: 'border-box', marginBottom: '20px' }}
+              style={{ background: '#202024', border: '1px solid #1e1e1e', color: '#fff', padding: '13px 16px', borderRadius: '8px', fontSize: '14px', width: '100%', boxSizing: 'border-box', marginBottom: '20px' }}
             />
             <button onClick={handleSubmit} disabled={loading} className="btn-gold" style={{ width: '100%', padding: '13px', borderRadius: '8px', fontSize: '15px', marginBottom: '20px' }}>
               {loading ? 'Sending...' : 'Send Reset Link →'}

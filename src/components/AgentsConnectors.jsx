@@ -52,7 +52,7 @@ export default function AgentsConnectors({ userPlan }) {
             <p style={{ fontSize: '11px', color: '#D4AF37', fontWeight: '700', letterSpacing: '1px', marginBottom: '14px' }}>{section.category.toUpperCase()}</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '12px' }}>
               {section.items.map((agent, i) => (
-                <div key={i} className="card-hover" style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '16px', position: 'relative', display: 'flex', flexDirection: 'column', minHeight: '120px' }}>
+                <div key={i} className="card-hover" style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '16px', position: 'relative', display: 'flex', flexDirection: 'column', minHeight: '120px' }}>
                   <span style={{ position: 'absolute', top: '10px', right: '10px', fontSize: '9px', background: '#1a1a1a', color: '#666', padding: '3px 7px', borderRadius: '8px', fontWeight: '600' }}>Soon</span>
                   <span style={{ fontSize: '24px', marginBottom: '10px' }}>{agent.icon}</span>
                   <div style={{ fontSize: '13px', fontWeight: '700', color: '#fff', marginBottom: '4px' }}>{agent.name}</div>

@@ -6,7 +6,7 @@ import logo from '../assets/logo.png'
 export default function About() {
   const navigate = useNavigate()
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
+    <div style={{ background: '#16161A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
       <Navbar />
       <section className="section-pad" style={{ padding: '80px 60px', textAlign: 'center', position: 'relative' }}>
         <div style={{ position: 'absolute', inset: 0, backgroundImage: 'radial-gradient(circle at 1px 1px, #D4AF3706 1px, transparent 0)', backgroundSize: '40px 40px', pointerEvents: 'none' }} />
@@ -17,7 +17,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section-pad" style={{ padding: '80px 60px', background: '#0d0d0d' }}>
+      <section className="section-pad" style={{ padding: '80px 60px', background: '#1C1C21' }}>
         <div className="grid-2" style={{ maxWidth: '800px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
           <div>
             <h2 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '20px', lineHeight: '1.2' }}>The pyramids were built by <span style={{ color: '#D4AF37' }}>Africans.</span></h2>
@@ -40,7 +40,7 @@ export default function About() {
             { icon: '🏛️', title: 'World-Class', desc: 'African-first doesn\'t mean lesser. Every feature matches or beats the global leaders. No compromises.' },
             { icon: '👑', title: 'Empower Builders', desc: 'Whether you\'re a market trader or a startup founder, Phaero gives you the tools to compete globally.' },
           ].map((v, i) => (
-            <div key={i} className="card-hover" style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '28px', textAlign: 'center' }}>
+            <div key={i} className="card-hover" style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '28px', textAlign: 'center' }}>
               <div style={{ fontSize: '36px', marginBottom: '16px' }}>{v.icon}</div>
               <h3 style={{ fontSize: '18px', fontWeight: '700', marginBottom: '10px' }}>{v.title}</h3>
               <p style={{ color: '#555', fontSize: '14px', lineHeight: '1.7' }}>{v.desc}</p>
@@ -49,7 +49,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section-pad" style={{ padding: '80px 60px', background: '#0d0d0d' }}>
+      <section className="section-pad" style={{ padding: '80px 60px', background: '#1C1C21' }}>
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <h2 style={{ fontSize: '36px', fontWeight: '800' }}>By the <span style={{ color: '#D4AF37' }}>numbers</span></h2>
         </div>
@@ -60,7 +60,7 @@ export default function About() {
             { number: '2 min', label: 'Avg Build Time' },
             { number: '4.9★', label: 'User Rating' },
           ].map((s, i) => (
-            <div key={i} style={{ textAlign: 'center', padding: '28px', background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px' }}>
+            <div key={i} style={{ textAlign: 'center', padding: '28px', background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px' }}>
               <div style={{ fontSize: '32px', fontWeight: '900', color: '#D4AF37', marginBottom: '8px' }}>{s.number}</div>
               <div style={{ fontSize: '13px', color: '#555' }}>{s.label}</div>
             </div>

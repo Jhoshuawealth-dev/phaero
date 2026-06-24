@@ -55,7 +55,7 @@ export default function ShowcaseReview() {
   if (!profile?.is_admin) return null
 
   return (
-    <div style={{ background: '#0A0A0A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
+    <div style={{ background: '#16161A', color: '#fff', fontFamily: 'Inter, sans-serif', minHeight: '100vh' }}>
       <Navbar />
 
       <section style={{ padding: '60px 40px' }}>
@@ -72,7 +72,7 @@ export default function ShowcaseReview() {
           ) : (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {submissions.map(sub => (
-                <div key={sub.id} style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px', display: 'flex', gap: '20px' }}>
+                <div key={sub.id} style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '12px', padding: '20px', display: 'flex', gap: '20px' }}>
                   <div style={{ width: '120px', height: '90px', background: sub.color || '#8B4513', borderRadius: '8px', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <div style={{ width: '60px', height: '6px', background: '#D4AF37', borderRadius: '3px' }} />
                   </div>

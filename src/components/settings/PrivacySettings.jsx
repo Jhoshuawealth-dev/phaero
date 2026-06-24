@@ -40,7 +40,7 @@ export default function PrivacySettings() {
         <p style={{ fontSize: '13px', fontWeight: '700', color: '#D4AF37', marginBottom: '4px' }}>ACCESS</p>
         <p style={{ fontSize: '12px', color: '#666', marginBottom: '16px' }}>Choose who can access projects you create.</p>
 
-        <div style={{ background: '#111', border: '1px solid #1e1e1e', borderRadius: '10px', padding: '16px', marginBottom: '10px' }}>
+        <div style={{ background: '#202024', border: '1px solid #1e1e1e', borderRadius: '10px', padding: '16px', marginBottom: '10px' }}>
           <div style={{ fontSize: '13px', fontWeight: '700', marginBottom: '4px' }}>Default project visibility</div>
           <div style={{ fontSize: '12px', color: '#666', marginBottom: '12px' }}>New projects are public or private by default.</div>
           <div style={{ display: 'flex', gap: '8px' }}>
@@ -60,7 +60,7 @@ export default function PrivacySettings() {
         <p style={{ fontSize: '13px', fontWeight: '700', color: '#D4AF37', marginBottom: '4px' }}>PUBLISHING</p>
         <p style={{ fontSize: '12px', color: '#666', marginBottom: '16px' }}>Control how your projects are published.</p>
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', background: '#111', border: '1px solid #1e1e1e', borderRadius: '10px', marginBottom: '8px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', background: '#202024', border: '1px solid #1e1e1e', borderRadius: '10px', marginBottom: '8px' }}>
           <div>
             <div style={{ fontSize: '13px', fontWeight: '700', marginBottom: '2px' }}>Require basic check before publish</div>
             <div style={{ fontSize: '11px', color: '#666' }}>Run a basic review before a project can go live for the first time.</div>
@@ -73,7 +73,7 @@ export default function PrivacySettings() {
         <p style={{ fontSize: '13px', fontWeight: '700', color: '#D4AF37', marginBottom: '4px' }}>SHARING</p>
         <p style={{ fontSize: '12px', color: '#666', marginBottom: '16px' }}>Control how you share projects and preview links.</p>
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', background: '#111', border: '1px solid #1e1e1e', borderRadius: '10px', marginBottom: '8px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', background: '#202024', border: '1px solid #1e1e1e', borderRadius: '10px', marginBottom: '8px' }}>
           <div>
             <div style={{ fontSize: '13px', fontWeight: '700', marginBottom: '2px' }}>Allow public preview links</div>
             <div style={{ fontSize: '11px', color: '#666' }}>Let yourself create temporary public preview links to your in-progress sites.</div>
@@ -81,7 +81,7 @@ export default function PrivacySettings() {
           <Toggle checked={settings.allow_public_preview_links} onChange={() => updateField('allow_public_preview_links', !settings.allow_public_preview_links)} />
         </div>
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', background: '#111', border: '1px solid #1e1e1e', borderRadius: '10px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '14px', background: '#202024', border: '1px solid #1e1e1e', borderRadius: '10px' }}>
           <div>
             <div style={{ fontSize: '13px', fontWeight: '700', marginBottom: '2px' }}>Opt out of data collection</div>
             <div style={{ fontSize: '11px', color: '#666' }}>Stop anonymous usage analytics for your account.</div>
