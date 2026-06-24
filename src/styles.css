@@ -155,40 +155,54 @@ div:hover > div > .upload-hint { opacity: 1; }
 
 /* Settings layout mobile responsiveness */
 @media (max-width: 768px) {
+  .settings-mobile-toggle { display: flex !important; align-items: center; justify-content: center; }
+  .settings-mobile-close { display: flex !important; align-items: center; justify-content: center; margin-left: auto; }
   .settings-sidebar {
-    width: 100% !important;
-    min-height: auto !important;
-    border-right: none !important;
-    border-bottom: 1px solid #1a1a1a !important;
-    overflow-x: auto !important;
-    white-space: nowrap !important;
-    display: flex !important;
-    padding: 12px 8px !important;
+    display: none !important;
   }
-  .settings-sidebar-group { display: flex !important; flex-wrap: nowrap !important; }
-  .settings-sidebar-group p { display: none !important; }
-  .settings-sidebar-item { border-left: none !important; border-bottom: 2px solid transparent !important; flex-shrink: 0; }
-  .settings-sidebar-item.active { border-bottom: 2px solid #D4AF37 !important; }
+  .settings-sidebar.mobile-open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 200 !important;
+    overflow-y: auto !important;
+  }
+  .settings-sidebar-group { display: block !important; }
+  .settings-sidebar-group p { display: block !important; }
+  .settings-sidebar-item { border-left: 2px solid transparent !important; }
+  .settings-sidebar-item.active { border-left: 2px solid #D4AF37 !important; }
   .settings-layout-outer { flex-direction: column !important; }
-  .settings-content { padding: 20px !important; }
+  .settings-content { padding: 70px 20px 20px !important; }
 }
 
 /* Settings layout mobile responsiveness */
 @media (max-width: 768px) {
+  .settings-mobile-toggle { display: flex !important; align-items: center; justify-content: center; }
+  .settings-mobile-close { display: flex !important; align-items: center; justify-content: center; margin-left: auto; }
   .settings-sidebar {
-    width: 100% !important;
-    min-height: auto !important;
-    border-right: none !important;
-    border-bottom: 1px solid #1a1a1a !important;
-    overflow-x: auto !important;
-    white-space: nowrap !important;
-    display: flex !important;
-    padding: 12px 8px !important;
+    display: none !important;
   }
-  .settings-sidebar-group { display: flex !important; flex-wrap: nowrap !important; }
-  .settings-sidebar-group p { display: none !important; }
-  .settings-sidebar-item { border-left: none !important; border-bottom: 2px solid transparent !important; flex-shrink: 0; }
-  .settings-sidebar-item.active { border-bottom: 2px solid #D4AF37 !important; }
+  .settings-sidebar.mobile-open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 200 !important;
+    overflow-y: auto !important;
+  }
+  .settings-sidebar-group { display: block !important; }
+  .settings-sidebar-group p { display: block !important; }
+  .settings-sidebar-item { border-left: 2px solid transparent !important; }
+  .settings-sidebar-item.active { border-left: 2px solid #D4AF37 !important; }
   .settings-layout-outer { flex-direction: column !important; }
-  .settings-content { padding: 20px !important; }
+  .settings-content { padding: 70px 20px 20px !important; }
+}
+
+@media (max-width: 768px) {
+  .settings-content > div { max-width: 100% !important; }
 }

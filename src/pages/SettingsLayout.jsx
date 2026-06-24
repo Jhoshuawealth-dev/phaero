@@ -45,6 +45,7 @@ export default function SettingsLayout() {
   const navigate = useNavigate()
   const { profile } = useAuth()
   const [active, setActive] = useState('account')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const renderContent = () => {
     switch (active) {
@@ -67,18 +68,21 @@ export default function SettingsLayout() {
     <div className="settings-layout-outer" style={{ background: '#0A0A0A', color: '#fff', minHeight: '100vh', fontFamily: 'Inter, sans-serif', display: 'flex' }}>
 
       {/* Settings sidebar */}
-      <div className="settings-sidebar" style={{ width: '260px', background: '#0d0d0d', borderRight: '1px solid #1a1a1a', minHeight: '100vh', padding: '20px 0', flexShrink: 0 }}>
-        <div style={{ padding: '0 20px 20px' }}>
+      <button className="settings-mobile-toggle" onClick={() => setMobileMenuOpen(true)} style={{ display: 'none', position: 'fixed', top: '16px', left: '16px', zIndex: 60, background: '#111', border: '1px solid #222', color: '#fff', width: '40px', height: '40px', borderRadius: '8px', fontSize: '18px', cursor: 'pointer' }}>☰</button>
+
+      <div className={`settings-sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`} style={{ width: '260px', background: '#0d0d0d', borderRight: '1px solid #1a1a1a', minHeight: '100vh', padding: '20px 0', flexShrink: 0 }}>
+        <div style={{ padding: '0 20px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <button onClick={() => navigate('/dashboard')} style={{ background: 'none', border: 'none', color: '#666', cursor: 'pointer', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '6px', padding: 0 }}>
             ← Go back
           </button>
+          <button className="settings-mobile-close" onClick={() => setMobileMenuOpen(false)} style={{ display: 'none', background: '#1a1a1a', border: '1px solid #222', color: '#fff', width: '28px', height: '28px', borderRadius: '6px', fontSize: '14px', cursor: 'pointer' }}>✕</button>
         </div>
 
         {sections.map((section, si) => (
           <div key={si} className="settings-sidebar-group" style={{ marginBottom: '20px' }}>
             <p style={{ fontSize: '10px', color: '#333', fontWeight: '700', letterSpacing: '1px', padding: '0 20px', marginBottom: '6px' }}>{section.group}</p>
             {section.items.map(item => (
-              <div key={item.key} onClick={() => setActive(item.key)} className={`settings-sidebar-item ${active === item.key ? 'active' : ''}`} style={{
+              <div key={item.key} onClick={() => { setActive(item.key); setMobileMenuOpen(false) }} className={`settings-sidebar-item ${active === item.key ? 'active' : ''}`} style={{
                 display: 'flex', alignItems: 'center', gap: '10px', padding: '9px 20px', cursor: 'pointer',
                 background: active === item.key ? '#1a1a0a' : 'transparent',
                 color: active === item.key ? '#D4AF37' : '#999',
