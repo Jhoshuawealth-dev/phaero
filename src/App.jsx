@@ -23,6 +23,7 @@ import ResetPassword from './pages/ResetPassword'
 import EmailVerificationBanner from './components/EmailVerificationBanner'
 import ShowcaseReview from './pages/ShowcaseReview'
 import SettingsLayout from './pages/SettingsLayout'
+import AIPlanner from './pages/AIPlanner'
 import ThemeToggle from './components/ThemeToggle'
 import { useLocation } from 'react-router-dom'
 
@@ -56,6 +57,7 @@ function App() {
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/admin/showcase-review" element={<ProtectedRoute><ShowcaseReview /></ProtectedRoute>} />
         <Route path="/settings" element={<ProtectedRoute><SettingsLayout /></ProtectedRoute>} />
+        <Route path="/planner" element={<ProtectedRoute><AIPlanner /></ProtectedRoute>} />
 
         <Route path="/onboarding" element={<ProtectedRoute><Onboarding /></ProtectedRoute>} />
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />

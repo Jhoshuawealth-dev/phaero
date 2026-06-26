@@ -22,9 +22,10 @@ function Sidebar({ tab, setTab, navigate, profile, signOut, mobileMenuOpen, setM
         {[
           { icon: '⊞', label: 'Dashboard', key: 'projects' },
           { icon: '✦', label: 'New Project', key: 'new' },
+          { icon: '🧠', label: 'AI Planner', key: 'planner' },
           { icon: '🌍', label: 'Showcase', key: 'showcase' },
         ].map((item, i) => (
-          <div key={i} onClick={() => item.key === 'new' ? navigate('/onboarding') : item.key === 'showcase' ? navigate('/showcase') : item.key === 'settings' ? navigate('/settings') : setTab(item.key)}
+          <div key={i} onClick={() => item.key === 'new' ? navigate('/onboarding') : item.key === 'planner' ? navigate('/planner') : item.key === 'showcase' ? navigate('/showcase') : item.key === 'settings' ? navigate('/settings') : setTab(item.key)}
             style={{ display: 'flex', alignItems: 'center', gap: '10px', padding: '10px 12px', borderRadius: '8px', cursor: 'pointer', marginBottom: '2px', background: tab === item.key ? '#1a1a0a' : 'transparent', color: tab === item.key ? '#D4AF37' : '#666', fontSize: '14px', fontWeight: tab === item.key ? '700' : '400' }}>
             <span style={{ fontSize: '16px' }}>{item.icon}</span> {item.label}
           </div>

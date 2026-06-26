@@ -74,6 +74,14 @@ export function AuthProvider({ children }) {
     return { data, error }
   }
 
+  const signInWithGoogle = async () => {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: window.location.origin + '/dashboard' }
+    })
+    return { data, error }
+  }
+
   const connectGitHubRepo = async (returnPath) => {
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'github',
@@ -90,7 +98,7 @@ export function AuthProvider({ children }) {
   }
 
   return (
-    <AuthContext.Provider value={{ user, profile, loading, signUp, signIn, signInWithGitHub, signOut, connectGitHubRepo, refreshProfile: () => user && fetchProfile(user.id) }}>
+    <AuthContext.Provider value={{ user, profile, loading, signUp, signIn, signInWithGitHub, signOut, connectGitHubRepo, signInWithGoogle, refreshProfile: () => user && fetchProfile(user.id) }}>
       {children}
     </AuthContext.Provider>
   )
