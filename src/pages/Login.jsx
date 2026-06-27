@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import PageLoader from '../components/PageLoader'
+import PasswordInput from '../components/PasswordInput'
 import { useAuth } from '../context/AuthContext'
 
 export default function Login() {
@@ -26,7 +27,11 @@ export default function Login() {
     setLoading(false)
 
     if (loginError) {
-      setError(loginError.message)
+      setError(
+        loginError.message.toLowerCase().includes('invalid login credentials')
+          ? 'Incorrect email or password. Please try again.'
+          : loginError.message
+      )
       return
     }
     navigate(redirect)
@@ -80,7 +85,7 @@ export default function Login() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '20px' }}>
           <input placeholder="Email address" type="email" value={email} onChange={e => setEmail(e.target.value)} className="input-gold" style={{ background: '#202024', border: '1px solid #1e1e1e', color: '#fff', padding: '13px 16px', borderRadius: '8px', fontSize: '14px', width: '100%', boxSizing: 'border-box' }} />
-          <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleLogin()} className="input-gold" style={{ background: '#202024', border: '1px solid #1e1e1e', color: '#fff', padding: '13px 16px', borderRadius: '8px', fontSize: '14px', width: '100%', boxSizing: 'border-box' }} />
+          <PasswordInput value={password} onChange={e => setPassword(e.target.value)} onKeyDown={e => e.key === 'Enter' && handleLogin()} placeholder="Password" />
         </div>
 
         <div style={{ textAlign: 'right', marginBottom: '20px' }}>
